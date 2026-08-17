@@ -1,452 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Pavithra | Portfolio</title>
 
-    <style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f8f5f0;
-            color: #2d241f;
-            line-height: 1.6;
-        }
-
-        /* NAVBAR */
-
-        header {
-            background: #2d241f;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav {
-            max-width: 1100px;
-            margin: auto;
-            height: 70px;
-            padding: 0 25px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: #d6a77a;
-            font-size: 26px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #d6a77a;
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 90vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-
-            padding: 40px 20px;
-
-            background: #2d241f;
-            color: white;
-        }
-
-        .hero-content {
-            max-width: 750px;
-        }
-
-        .welcome {
-            color: #d6a77a;
-            letter-spacing: 3px;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .hero h1 {
-            font-size: 60px;
-            margin-bottom: 10px;
-        }
-
-        .hero h1 span {
-            color: #d6a77a;
-        }
-
-        .hero h2 {
-            font-size: 25px;
-            font-weight: normal;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            color: #ddd;
-            font-size: 17px;
-            margin-bottom: 30px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-
-            background: #d6a77a;
-            color: #2d241f;
-
-            text-decoration: none;
-            font-weight: bold;
-
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #e5bc96;
-        }
-
-        .outline {
-            background: transparent;
-            color: white;
-            border: 1px solid #d6a77a;
-        }
-
-        .outline:hover {
-            background: #d6a77a;
-            color: #2d241f;
-        }
-
-        /* GENERAL SECTION */
-
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 90px 25px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 55px;
-        }
-
-        .section-title::after {
-            content: "";
-            display: block;
-
-            width: 60px;
-            height: 3px;
-
-            background: #b87c4b;
-
-            margin: 12px auto;
-        }
-
-        /* ABOUT */
-
-        .about {
-            display: flex;
-            align-items: center;
-            gap: 70px;
-        }
-
-        .profile {
-            width: 230px;
-            height: 230px;
-
-            border-radius: 50%;
-
-            background: #2d241f;
-            color: #d6a77a;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 90px;
-            font-weight: bold;
-
-            border: 8px solid #d6a77a;
-        }
-
-        .about-image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-
-        .about-text {
-            flex: 2;
-        }
-
-        .about-text h3 {
-            font-size: 24px;
-            margin-bottom: 12px;
-        }
-
-        .about-text p {
-            color: #655850;
-            margin-bottom: 15px;
-        }
-
-        .education {
-            margin-top: 25px;
-            padding: 20px;
-
-            border-left: 4px solid #b87c4b;
-
-            background: #eee8e0;
-        }
-
-        /* SKILLS */
-
-        #skills {
-            max-width: none;
-            background: #eee8e0;
-            padding-left: 8%;
-            padding-right: 8%;
-        }
-
-        .skills-container {
-            max-width: 1100px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .skill-card {
-            background: white;
-            padding: 30px;
-
-            text-align: center;
-
-            border-radius: 8px;
-
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .skill-card h3 {
-            color: #8b5e3c;
-            margin-bottom: 8px;
-        }
-
-        .skill-card p {
-            color: #777;
-        }
-
-        /* PROJECTS */
-
-        .projects-container {
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .project-card {
-            background: white;
-
-            padding: 30px;
-
-            border-radius: 8px;
-
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .project-number {
-            color: #b87c4b;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .project-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        .project-card p {
-            color: #6b625d;
-            margin-bottom: 20px;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tags span {
-            background: #eee8e0;
-            color: #70492f;
-
-            padding: 5px 10px;
-
-            border-radius: 20px;
-
-            font-size: 12px;
-        }
-
-        /* CONTACT */
-
-        #contact {
-            text-align: center;
-        }
-
-        .contact-description {
-            color: #666;
-            margin-bottom: 35px;
-        }
-
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .contact-card {
-            background: white;
-
-            padding: 25px;
-
-            width: 30%;
-
-            border-radius: 8px;
-
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .contact-card h3 {
-            color: #8b5e3c;
-            margin-bottom: 8px;
-        }
-
-        .contact-card p {
-            color: #666;
-        }
-
-        /* FOOTER */
-
-        footer {
-            background: #2d241f;
-            color: white;
-
-            text-align: center;
-
-            padding: 20px;
-        }
-
-        /* RESPONSIVE */
-
-        @media (max-width: 768px) {
-
-            nav {
-                flex-direction: column;
-                height: auto;
-                padding: 15px;
-                gap: 15px;
-            }
-
-            .nav-links {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 42px;
-            }
-
-            .about {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .contact-card {
-                width: 90%;
-            }
-        }
-
-        @media (max-width: 500px) {
-
-            .hero h1 {
-                font-size: 35px;
-            }
-
-            .hero h2 {
-                font-size: 20px;
-            }
-
-            .buttons {
-                flex-direction: column;
-            }
-
-            .skills-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
@@ -460,11 +25,27 @@
             <h2 class="logo">Pavithra.</h2>
 
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </nav>
@@ -646,9 +227,11 @@
                 </p>
 
                 <div class="tags">
+
                     <span>Python</span>
                     <span>OpenCV</span>
                     <span>MediaPipe</span>
+
                 </div>
 
             </div>
@@ -671,9 +254,11 @@
                 </p>
 
                 <div class="tags">
+
                     <span>AI</span>
                     <span>React</span>
                     <span>Python</span>
+
                 </div>
 
             </div>
@@ -696,9 +281,11 @@
                 </p>
 
                 <div class="tags">
+
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>JavaScript</span>
+
                 </div>
 
             </div>
@@ -770,4 +357,5 @@
     </footer>
 
 </body>
+
 </html>
